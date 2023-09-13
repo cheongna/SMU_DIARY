@@ -19,3 +19,7 @@ spring:
     url: jdbc:mariadb://localhost:3307/smu_diary
     username: root
     password: root
+  security:
+    user:
+      name: user
+      password: 1234
