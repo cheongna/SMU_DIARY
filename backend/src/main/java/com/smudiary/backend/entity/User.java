@@ -6,8 +6,6 @@ import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
-import org.springframework.boot.sql.init.dependency.DependsOnDatabaseInitialization;
-import org.springframework.context.annotation.DependsOn;
 
 import java.time.LocalDate;
 
@@ -39,7 +37,7 @@ public class User extends BaseEntity {
     //null이 가능하도록 변경 회원가입 시에 닉네임까지 필수로
     //설정하는건 추후 validation 설정 후에 변경
     @Column(nullable = true, length = 20)
-    private String nickname;
+    private String nickname = getNickname() == null ? getName() : getNickname();
 
     @Column(nullable = false)
     private LocalDate birth;
@@ -47,5 +45,8 @@ public class User extends BaseEntity {
     //email은 반드시 입력하도록 변경
     @Column(nullable = false, length = 50)
     private String email;
+
+    @Column(nullable = true, length = 50)
+    private String motto;
 
 }
