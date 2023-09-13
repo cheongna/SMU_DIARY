@@ -2,6 +2,7 @@ package com.smudiary.backend.user.dto.response;
 
 import lombok.*;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @AllArgsConstructor
@@ -13,6 +14,7 @@ public class UserResponseDto {
     private Long id;
     private String username;
     private String password;
+    private LocalDate birth;
     private String email;
     private LocalDateTime createdAt;
 }
