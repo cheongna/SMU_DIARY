@@ -1,4 +1,4 @@
-package com.smudiary.backend.dto.request;
+package com.smudiary.backend.user.dto.request;
 
 import lombok.*;
 

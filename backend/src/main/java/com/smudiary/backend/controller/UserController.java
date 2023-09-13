@@ -1,8 +1,9 @@
 package com.smudiary.backend.controller;
 
-import com.smudiary.backend.dto.request.UserRequestDto;
-import com.smudiary.backend.dto.response.UserResponseDto;
-import com.smudiary.backend.service.UserServiceImpl;
+import com.smudiary.backend.user.dto.request.UserLoginRequestDto;
+import com.smudiary.backend.user.dto.request.UserRequestDto;
+import com.smudiary.backend.user.dto.response.UserResponseDto;
+import com.smudiary.backend.user.service.UserServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,7 +11,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/user")
+@RequestMapping("/api/users")
 public class UserController {
     private final UserServiceImpl userService;
 
@@ -27,5 +28,10 @@ public class UserController {
     @GetMapping("/{UserId}")
     public UserResponseDto getUserById(@PathVariable Long UserId) {
         return userService.get(UserId);
+    }
+
+    @PostMapping("/login")
+    public Long login(@RequestBody UserLoginRequestDto request) {
+        return userService.login(request);
     }
 }
