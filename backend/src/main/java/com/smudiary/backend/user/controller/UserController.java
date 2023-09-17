@@ -1,7 +1,9 @@
 package com.smudiary.backend.user.controller;
 
 import com.smudiary.backend.user.dto.request.UserLoginRequestDto;
+import com.smudiary.backend.user.dto.request.UserProfileRequestDto;
 import com.smudiary.backend.user.dto.request.UserRequestDto;
+import com.smudiary.backend.user.dto.response.UserProfileResponseDto;
 import com.smudiary.backend.user.dto.response.UserResponseDto;
 import com.smudiary.backend.user.service.UserServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
@@ -34,9 +36,9 @@ public class UserController {
     }
 
     @Operation(summary = "회원 id로 회원 조회")
-    @GetMapping("/{UserId}")
-    public UserResponseDto getUserById(@PathVariable Long UserId) {
-        return userService.get(UserId);
+    @GetMapping("/{userId}")
+    public UserResponseDto getUserById(@PathVariable(value = "userId") Long userId) {
+        return userService.get(userId);
     }
 
     @Operation(summary = "로그인 처리")
@@ -55,5 +57,18 @@ public class UserController {
     @PostMapping("/findPassword")
     public String findPasswordByUsernameAndEmail(@RequestParam("username") String username, @RequestParam("email") String email) {
         return userService.findPasswordByUsernameAndEmail(username, email);
+    }
+
+    @Operation(summary = "프로필 정보 가져오기")
+    @GetMapping("/{userId}/profile")
+    public UserProfileResponseDto getUserProfile(@PathVariable(value = "userId") long userId) {
+        return userService.getProfile(userId);
+    }
+
+    @Operation(summary = "프로필 정보 업데이트")
+    @PostMapping("/{userId}/profile")
+    public UserProfileResponseDto updateUserProfile(@PathVariable(value = "userId") long userId,
+                                                    UserProfileRequestDto requestDto) {
+        return userService.updateProfile(userId, requestDto);
     }
 }
