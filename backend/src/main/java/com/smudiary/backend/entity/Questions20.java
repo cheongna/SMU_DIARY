@@ -1,10 +1,7 @@
 package com.smudiary.backend.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SQLDelete;
@@ -20,7 +17,7 @@ import org.hibernate.annotations.Where;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Questions20 extends BaseEntity{
+public class Questions20 extends BaseEntity {
 
     // 20문답_아이디
     @Id
@@ -30,10 +27,14 @@ public class Questions20 extends BaseEntity{
 
     @OneToOne
     @JoinColumn(name = "user_id")
-    private Profile profile;
+    private User user;
 
     // 당신의 mbti는?
+    @Setter
     @Column(name = "mbti", length = 4)
     private String mbti;
 
+    @Setter
+    @Column(name = "favorite_food", length = 10)
+    private String favoriteFood;
 }
