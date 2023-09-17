@@ -15,7 +15,6 @@ import org.springframework.web.multipart.MultipartFile;
 import java.net.MalformedURLException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.Optional;
 
 @Service
@@ -69,7 +68,7 @@ public class MainPostServiceImpl implements MainPostService {
         var fileName = picture.getOriginalFilename();
         log.info(fileName);
         String uploadPath = FILEPATH.concat("/" + userId);
-        Path filepath = Path.of(FILEPATH.concat("/" + userId));
+        Path filepath = Path.of(uploadPath);
         if (!Files.exists(filepath)) {
             Files.createDirectories(filepath);
         }
@@ -80,11 +79,10 @@ public class MainPostServiceImpl implements MainPostService {
         Path existingFile = filepath.resolve(fileName);
         if (Files.exists(existingFile)) {
             Files.delete(existingFile);
+            Files.copy(picture.getInputStream(), filepath.resolve(fileName));
+        } else {
+            Files.copy(picture.getInputStream(), filepath.resolve(fileName));
         }
-
-        Files.copy(picture.getInputStream(), Paths.get(uploadPath).resolve(fileName));
         return fileName;
     }
-
-
 }
