@@ -2,10 +2,13 @@ package com.smudiary.backend.user.service;
 
 import com.smudiary.backend.entity.User;
 import com.smudiary.backend.user.dto.request.UserLoginRequestDto;
+import com.smudiary.backend.user.dto.request.UserProfileRequestDto;
 import com.smudiary.backend.user.dto.request.UserRequestDto;
+import com.smudiary.backend.user.dto.response.UserProfileResponseDto;
 import com.smudiary.backend.user.dto.response.UserResponseDto;
 import com.smudiary.backend.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -15,6 +18,7 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final ModelMapper modelMapper;
@@ -63,6 +67,28 @@ public class UserServiceImpl implements UserService {
     public String findPasswordByUsernameAndEmail(String username, String email) {
         var user = userRepository.findByUsernameAndEmail(username, email);
         return user.map(User::getPassword).orElse("아이디 혹은 이메일이 일치하지 않습니다.");
+    }
+
+    //프로필 정보 업데이트
+    @Override
+    public UserProfileResponseDto updateProfile(Long userId, UserProfileRequestDto request) {
+        User user = userRepository.findById(userId).orElseThrow();
+        user.setNickname(request.getNickname());
+        user.setBirth(request.getBirth());
+        user.setEmail(request.getEmail());
+        user.setMotto(request.getMotto());
+        User updatedUser = userRepository.save(user);
+        return modelMapper.map(updatedUser, UserProfileResponseDto.class);
+    }
+
+    //프로필 정보 가져오기
+    @Override
+    public UserProfileResponseDto getProfile(Long userId) {
+        var user = userRepository.findById(userId).orElseThrow();
+        log.info(user.getNickname());
+        var response = modelMapper.map(user, UserProfileResponseDto.class);
+        log.info(response.getNickname());
+        return response;
     }
 
     @Override

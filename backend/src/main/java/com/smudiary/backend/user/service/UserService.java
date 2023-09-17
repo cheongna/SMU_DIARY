@@ -1,7 +1,9 @@
 package com.smudiary.backend.user.service;
 
 import com.smudiary.backend.user.dto.request.UserLoginRequestDto;
+import com.smudiary.backend.user.dto.request.UserProfileRequestDto;
 import com.smudiary.backend.user.dto.request.UserRequestDto;
+import com.smudiary.backend.user.dto.response.UserProfileResponseDto;
 import com.smudiary.backend.user.dto.response.UserResponseDto;
 
 import java.util.List;
@@ -25,4 +27,9 @@ public interface UserService {
     //아이디와 이메일로 비밀번호 찾기
     String findPasswordByUsernameAndEmail(String username, String email);
 
+    //프로필 정보 가져오기
+    UserProfileResponseDto getProfile(Long userId);
+
+    //프로필 정보 업데이트
+    UserProfileResponseDto updateProfile(Long userId, UserProfileRequestDto request);
 }

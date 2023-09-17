@@ -1,10 +1,7 @@
 package com.smudiary.backend.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.SQLDelete;
@@ -29,12 +26,13 @@ public class Profile extends BaseEntity {
     @Column(name = "user_id", nullable = false)
     private Long userId;
 
+    @Setter
     @OneToOne
     @JoinColumn(name = "user_id")
     private User user;
 
     // 20문답_번호
-    @Column(name = "questions_id", nullable = false)
+    @Column(name = "questions_id", nullable = true)
     private Long questionsId;
 
     // 유저_닉네임
