@@ -1,0 +1,75 @@
+.container{
+background-color: rgb(30, 30, 30);
+height: auto;
+}
+.big_js{
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background-color: gold;
+}
+.title_zone {
+  width: auto;
+  height: 150px;
+  overflow: hidden;
+}
+.title_js{
+  width: auto;
+  height: 150px;
+  color: gold;
+  font-size: 36px;
+}
+.sub_js {
+  color: aliceblue;
+}
+
+
+
+/********** tab **********/
+ul {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+li {
+  padding: 20px;
+  margin: 0;
+  border-radius: 10px 10px 0 0;
+  list-style: none;
+  color: aliceblue;
+  background-color: rgb(60, 62, 64);
+}
+.tab-content {
+  width: 640px;
+  height: 360px;
+  margin: 0 10px 10px 10px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgb(73, 86, 98);
+}
+section{
+  color: aliceblue;
+}
+
+.active {
+  display: flex !important;
+}
+
+.tab-menu {
+  display: flex;
+  padding: 1rem 1rem 2rem;
+}
+
+.tab-menu li {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.tab-menu li.active {
+  color: darkslateblue
+}
+
+.tab-content section {
+  display: none;
+}
