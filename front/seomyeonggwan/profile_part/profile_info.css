@@ -41,13 +41,27 @@ body {
     margin-right: 20px;
 }
 
-#rTop > h1 {
-    margin: 0;
-}
-
-
 #rTop {
     width: 70%;
+}
+
+#rTop > p {
+    display: inline;
+}
+
+/* 사용자 다이어리 이름 글꼴 꾸미기 및 위치 배치 */
+#rTop > p:first-child {
+    float: left;
+    font-size: xx-large;
+    font-weight: bold;
+    margin: 0.8vh 0 0 0;
+}
+
+/* 사용자 다이어리 주소 글꼴 꾸미기 및 위치 배치 */
+#rTop > p:last-child {
+    float: right;
+    font-size: small;
+    margin: 4vh 0 0 0;
 }
 
 #introduce {
