@@ -1,0 +1,199 @@
+body {
+    background-color: rgb(180, 180, 180);
+}
+.container{
+    width: 960px;
+    height: 520px;
+    margin: auto;
+    position: relative;
+}
+.blue_box{
+    width: 960px;
+    height: 520px;
+    border-radius: 10px;
+    background-color: rgb(105, 200, 232);
+
+    /* 정가운데 정렬 */
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+}
+.dashed_box{
+    width: 920px;
+    height: 490px;
+    border-radius: 10px;
+    border-style: dashed;
+    border-color: aliceblue;
+
+    /* 정가운데 정렬 */
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+}
+.main_box{
+    width: 900px;
+    height: 470px;
+    border-radius: 10px;
+    background-color: rgb(236, 235, 234);
+    overflow: hidden;
+
+    /* 정가운데 정렬 */
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+/************좌측************/
+.left_zone {
+    width: 290px;
+    height: 470px;
+    margin: auto;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    /* background-color: rgb(126, 174, 153); */
+}
+.left_main_box{
+    width: 270px;
+    height: 400px;
+    margin: auto;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(172, 172, 172);
+    background-color: white;
+
+    /*하단정렬*/
+    /* position: absolute;
+    bottom: 2%; left: 5%; */
+}
+.left_contents_box{
+    width: 250px;
+    height: 390px;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+}
+.srh_box{
+    width: 290px;
+    height: 50px;
+    margin: auto;
+}
+
+/*****요소들*****/
+.profile_pic{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+    background-color: aquamarine;
+
+    /*정렬*/
+    position: absolute;
+    top: 5%; left: 16%;
+}
+.ment{
+    width: 250px;
+    height: auto;
+    margin: auto;
+    text-align: center;
+    background-color: bisque;
+
+    /*정렬*/
+    position: absolute;
+    top: 45%; left: 4%;
+}
+.name_box{
+    width: 200px;
+    height: auto;
+    /* margin: auto; */
+    background-color: bisque;
+
+    /*하단정렬*/
+    position: absolute;
+    bottom: 8%; left: 6%;
+}
+
+
+/************우측************/
+.right_zone {
+    width: 590px;
+    height: 470px;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    /* background-color: rgb(126, 174, 153); */
+}
+.title_box{
+    width: 590px;
+    height: 50px;
+    margin: 0;
+    display: inline-block;
+    position: relative;
+}
+.home_title{
+    font-size: 24px;
+
+    /*하단정렬*/
+    position: absolute;
+    bottom: 0%; left: 0%;
+}
+.home_address{
+    /*하단정렬*/
+    position: absolute;
+    bottom: 0%; right: 5%;
+
+}
+.right_main_box{
+    width: 570px;
+    height: 400px;
+    margin: auto;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(172, 172, 172);
+    background-color: white;
+
+    /*하단정렬*/
+    /* position: absolute;
+    bottom: 2%; right: 2%; */
+}
+.right_contents_box{
+    width: 550px;
+    height: 390px;
+    margin: auto;
+    padding: 5px;
+    overflow-y: scroll;
+}
+/*****요소들*****/
+.news_box{
+    width: 230px;
+    height: 150px;
+    margin: 5px;
+    display: inline-block;
+    overflow: hidden;
+}
+.news_title{
+    font-size: 18px;
+    padding: 5px;
+}
+.schedule_box{
+    width: 230px;
+    height: 150px;
+    margin: 5px;
+    display: inline-block;
+    overflow: hidden;
+}
+.imshi_box{
+    width: 500px;
+    height: 300px;
+    margin: 5px;
+    display: inline-block;
+}
+
+hr{
+    width: 80%;
+    margin-left: 0%;
+}
