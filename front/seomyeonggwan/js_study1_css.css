@@ -1,0 +1,55 @@
+body {
+    background-color: black;
+    margin-top: 50px;
+}
+
+#header {
+    width: 500px;
+    height: 57px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#header > img {
+    float: left;
+    margin-right: 25px;
+}
+
+#header > h1 {
+    margin: -10px 0 0 0; /* h1의 상단 여백 줄이기 */
+    font-size: 35px;
+    color: yellow;
+}
+
+#header > p {
+    margin: 0;
+    color: rgba(243, 243, 181, 0.753);
+}
+
+#menu-container {
+    width: 500px;
+    height: 37px;
+    margin: 0 auto;
+}
+
+button {
+    border: 0px solid rgb(32, 32, 31);
+    margin-top: 20px;
+    margin-right: 2px; /* 버튼 사이에 간격 주기*/
+    border-radius: 6px 6px 0 0; /* 모서리 둥글게 만들기 */
+    float:left;
+    background-color: rgb(32, 32, 31);
+    color: white;
+}
+
+#content {
+    width: 492px;
+    height: 130px;
+    border: 4px solid rgb(32, 32, 31);
+    margin: 0 auto;
+    background-color: rgb(32, 32, 31);
+}
+
+li {
+    color: white;
+}
