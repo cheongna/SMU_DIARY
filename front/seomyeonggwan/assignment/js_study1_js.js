@@ -10,7 +10,7 @@ window.onload = function() {
         button3.style.background = "rgb(32, 32, 31)"
         this.style.background = "yellow";
         this.style.color = "black";
-        var content = document.getElementById('content');
+        let content = document.getElementById('content');
         content.innerHTML = '<ul><li>React is extremely popular</li><li>It makes building complex, interactive UIs a breeze</li><li>It\'s powerful & flexible</li><li>It has a very active and versatile ecosystem</li></ul>';
     };
 
@@ -21,7 +21,7 @@ window.onload = function() {
         button3.style.background = "rgb(32, 32, 31)"
         this.style.background = "yellow";
         this.style.color = "black";
-        var content = document.getElementById('content');
+        let content = document.getElementById('content');
         content.innerHTML = '<ul><li>Core Features</li><li>Core Features</li><li>Core Features</li><li>Core Features</li></ul>';
     };
 
@@ -32,7 +32,7 @@ window.onload = function() {
         button2.style.background = "rgb(32, 32, 31)"
         this.style.background = "yellow";
         this.style.color = "black";
-        var content = document.getElementById('content');
+        let content = document.getElementById('content');
         content.innerHTML = '<ul><li>Related Resources</li><li>Related Resources</li><li>Related Resources</li><li>Related Resources</li></ul>';
     };
 };

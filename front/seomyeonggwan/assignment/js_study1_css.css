@@ -33,7 +33,7 @@ body {
 }
 
 button {
-    border: 0px solid rgb(32, 32, 31);
+    border: 0 solid rgb(32, 32, 31);
     margin-top: 20px;
     margin-right: 2px; /* 버튼 사이에 간격 주기*/
     border-radius: 6px 6px 0 0; /* 모서리 둥글게 만들기 */
