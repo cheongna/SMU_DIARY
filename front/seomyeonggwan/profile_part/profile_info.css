@@ -206,9 +206,14 @@ form {
 /* 카테고리에 있는 버튼 */
 #home_btn {
     position: absolute;
-    width: 3.7vw;
-    right: 0.05vw;
+    border-width: 0;
+    background-color: rgb(132, 192, 233);
+    border-radius: 5px;
+    padding: 3px 0 3px 0;
+    width: 3.5vw;
+    right: 0.15vw;
     top: 12.75vh;
+    color: white;
     /*
     width: 69px;
     right: 1px;
@@ -218,9 +223,14 @@ form {
 
 #profile_btn {
     position: absolute;
-    width: 3.7vw;
-    right: 0.05vw;
-    top: 15.5vh;
+    border-width: 0;
+    background-color: rgb(132, 192, 233);
+    border-radius: 5px;
+    padding: 3px 0 3px 0;
+    width: 3.5vw;
+    right: 0.15vw;
+    top: 15.75vh;
+    color: white;
     /*
     width: 69px;
     right: 1px;
@@ -230,9 +240,14 @@ form {
 
 #diary_btn {
     position: absolute;
-    width: 3.7vw;
-    right: 0.05vw;
-    top: 18.25vh;
+    border-width: 0;
+    background-color: rgb(132, 192, 233);
+    border-radius: 5px;
+    padding: 3px 0 3px 0;
+    width: 3.5vw;
+    right: 0.15vw;
+    top: 18.75vh;
+    color: white;
     /*
     right: 1px;
     top: 170px;
@@ -241,9 +256,14 @@ form {
 
 #gallery_btn {
     position: absolute;
-    width: 3.7vw;
-    right: 0.05vw;
-    top: 21vh;
+    border-width: 0;
+    background-color: rgb(132, 192, 233);
+    border-radius: 5px;
+    padding: 3px 0 3px 0;
+    width: 3.5vw;
+    right: 0.15vw;
+    top: 21.75vh;
+    color: white;
     /*
     width: 69px;
     right: 1px;
@@ -253,9 +273,14 @@ form {
 
 #adm_btn {
     position: absolute;
-    width: 3.7vw;
-    right: 0.05vw;
-    top: 23.75vh;
+    border-width: 0;
+    background-color: rgb(132, 192, 233);
+    border-radius: 5px;
+    padding: 3px 0 3px 0;
+    width: 3.5vw;
+    right: 0.15vw;
+    top: 24.75vh;
+    color: white;
     /*
     width: 69px;
     right: 1px;
