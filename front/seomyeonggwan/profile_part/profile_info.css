@@ -10,7 +10,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
     background-color: rgb(180, 209, 218);
 }
 
@@ -193,6 +192,7 @@ form {
     overflow: hidden;
 }
 
+/* 프로필 정보 수정 버튼 */
 #mod_btn {
     margin-top: 2.2vh; /*20px*/
     position: absolute;
@@ -201,4 +201,64 @@ form {
     border: 1px solid black;
     border-radius: 8px;
     padding: 5px 13px;
+}
+
+/* 카테고리에 있는 버튼 */
+#home_btn {
+    position: absolute;
+    width: 3.7vw;
+    right: 0.05vw;
+    top: 12.75vh;
+    /*
+    width: 69px;
+    right: 1px;
+    top: 120px;
+    */
+}
+
+#profile_btn {
+    position: absolute;
+    width: 3.7vw;
+    right: 0.05vw;
+    top: 15.5vh;
+    /*
+    width: 69px;
+    right: 1px;
+    top: 145px;
+    */
+}
+
+#diary_btn {
+    position: absolute;
+    width: 3.7vw;
+    right: 0.05vw;
+    top: 18.25vh;
+    /*
+    right: 1px;
+    top: 170px;
+    */
+}
+
+#gallery_btn {
+    position: absolute;
+    width: 3.7vw;
+    right: 0.05vw;
+    top: 21vh;
+    /*
+    width: 69px;
+    right: 1px;
+    top: 195px;
+    */
+}
+
+#adm_btn {
+    position: absolute;
+    width: 3.7vw;
+    right: 0.05vw;
+    top: 23.75vh;
+    /*
+    width: 69px;
+    right: 1px;
+    top: 220px;
+    */
 }
