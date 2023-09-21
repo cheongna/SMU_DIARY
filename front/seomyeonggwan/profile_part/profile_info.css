@@ -23,15 +23,6 @@ body {
     display: flex;
 }
 
-#menu_btn {
-    width: 4vw; /*60px*/
-    display: block;
-    padding: 0;
-    margin-left: -2.9vw; /**/
-    margin-bottom: 1px;
-    border: 0;
-}
-
 #diary {
     width: 95vw;
     height: 90vh; /* 상하 여백을 두기 위해 조정 */
