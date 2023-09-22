@@ -23,6 +23,7 @@ body {
     display: flex;
 }
 
+/* 다이어리 영역 */
 #diary {
     width: 95vw;
     height: 90vh; /* 상하 여백을 두기 위해 조정 */
@@ -34,21 +35,23 @@ body {
     align-items: center; /* 세로 중앙 정렬 */
 }
 
-#lTop {
+/* 다이어리 왼쪽 상단 영역 */
+#leftTopArea {
     width: 20vw;
     margin-right: 20px;
 }
 
-#rTop {
+/* 다이어리 오른쪽 상단 영역 */
+#rightTopArea {
     width: 75%;
 }
 
-#rTop > p {
+#rightTopArea > p {
     display: inline;
 }
 
 /* 사용자 다이어리 이름 글꼴 꾸미기 및 위치 배치 */
-#rTop > p:first-child {
+#rightTopArea > p:first-child {
     float: left;
     font-size: xx-large;
     font-weight: bold;
@@ -56,13 +59,14 @@ body {
 }
 
 /* 사용자 다이어리 주소 글꼴 꾸미기 및 위치 배치 */
-#rTop > p:last-child {
+#rightTopArea > p:last-child {
     float: right;
     font-size: small;
     margin: 4vh 0 0 0;
 }
 
-#introduce {
+/* 다이어리 왼쪽 하단 영역 */
+#leftArea {
     width: 20vw;
     height: 90%;
     border: 2px solid grey;
@@ -72,13 +76,13 @@ body {
     margin-bottom: 20px;
 }
 
-#introduce > h1 {
+#leftArea > h1 {
     margin: 10px 0;
     padding-left: 25px;
     color: rgb(18, 99, 131);
 }
 
-#introduce > h1:after {
+#leftArea > h1:after {
     content: "";
     display: block;
     width: 15vw;
@@ -86,13 +90,14 @@ body {
     margin: 8px 0;
 }
 
-#introduce > p {
+#leftArea > p {
     margin: 0;
     padding-left: 50px;
     font-weight: 800;
 }
 
-#profile {
+/* 다이어리 오른쪽 하단 영역 */
+#rightArea {
     width: 75%;
     height: 90%;
     border: 2px solid grey;
@@ -102,7 +107,7 @@ body {
 }
 
 /* 선 긋기 */
-#profile > h1:after {
+#rightArea > h1:after {
     content: "";
     display: block;
     width: 53vw;
