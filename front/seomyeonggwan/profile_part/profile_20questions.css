@@ -185,3 +185,64 @@ strong {
 
     padding: 5px 13px;
 }
+
+/* 카테고리에 있는 버튼 */
+#home_btn {
+    position: absolute;
+    border-width: 0;
+    background-color: rgb(132, 192, 233);
+    border-radius: 5px;
+    padding: 3px 0 3px 0;
+    width: 3.5vw;
+    right: 0.15vw;
+    top: 12.75vh;
+    color: white;
+}
+
+#profile_btn {
+    position: absolute;
+    border-width: 0;
+    background-color: rgb(132, 192, 233);
+    border-radius: 5px;
+    padding: 3px 0 3px 0;
+    width: 3.5vw;
+    right: 0.15vw;
+    top: 15.75vh;
+    color: white;
+}
+
+#diary_btn {
+    position: absolute;
+    border-width: 0;
+    background-color: rgb(132, 192, 233);
+    border-radius: 5px;
+    padding: 3px 0 3px 0;
+    width: 3.5vw;
+    right: 0.15vw;
+    top: 18.75vh;
+    color: white;
+}
+
+#gallery_btn {
+    position: absolute;
+    border-width: 0;
+    background-color: rgb(132, 192, 233);
+    border-radius: 5px;
+    padding: 3px 0 3px 0;
+    width: 3.5vw;
+    right: 0.15vw;
+    top: 21.75vh;
+    color: white;
+}
+
+#adm_btn {
+    position: absolute;
+    border-width: 0;
+    background-color: rgb(132, 192, 233);
+    border-radius: 5px;
+    padding: 3px 0 3px 0;
+    width: 3.5vw;
+    right: 0.15vw;
+    top: 24.75vh;
+    color: white;
+}
