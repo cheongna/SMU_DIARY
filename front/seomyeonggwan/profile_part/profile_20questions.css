@@ -246,3 +246,31 @@ strong {
     top: 24.75vh;
     color: white;
 }
+
+/* 스크롤 바 스타일링 하겠다는 기본 속성*/
+::-webkit-scrollbar {
+    width: 25px;  /* 세로축 스크롤바 폭 너비 */
+    height: 20px;  /* 가로축 스크롤바 폭 너비 */
+}
+
+div#content::-webkit-scrollbar {
+    background: rgb(235, 235, 236);
+}
+
+div#content::-webkit-scrollbar-thumb {
+    background: #c7c6c6;
+}
+
+div#content::-webkit-scrollbar-button:end:increment {
+    color:#363535;
+    display: block;
+    height: 25px;
+    background: rgb(235, 235, 236); /* 아래 화살표 이미지 넣어야 함 */
+}
+
+div#content::-webkit-scrollbar-button:start:decrement {
+    color:#363535;
+    display: block;
+    height: 25px;
+    background: rgb(235, 235, 236); /* 위 화살표 이미지 넣어야 함 */
+}
