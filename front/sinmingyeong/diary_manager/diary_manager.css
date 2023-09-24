@@ -68,13 +68,6 @@ body {
     /* position: absolute;
     bottom: 2%; left: 5%; */
 }
-.left_contents_box{
-    width: 250px;
-    height: 390px;
-    margin: auto;
-    padding: 10px;
-    position: relative;
-}
 .srh_box{
     width: 290px;
     height: 50px;
@@ -83,8 +76,27 @@ body {
     position: relative;
 }
 
-/*****요소들*****/
+.left_contents_box{
+    width: 250px;
+    height: 390px;
+    margin: auto;
+    padding: 15px;
+    position: relative;
+}
 
+/*****좌측 요소들*****/
+
+hr{
+    width: 90%;
+    margin-left: 0%;
+}
+
+.blue_title {
+    color: #66acfd;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 0;
+}
 
 
 /************우측************/
@@ -135,12 +147,30 @@ body {
     width: 550px;
     height: 390px;
     margin: auto;
-    padding: 5px;
-    overflow-y: scroll;
+    padding: 10px;
+    overflow: hidden;
 }
-/*****요소들*****/
+/*****우측 요소들*****/
+.setting_box{
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+}
 
-hr{
-    width: 80%;
-    margin-left: 0%;
+.setting_name{
+    width: 90px;
+    display: inline-block;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px;
+    text-align: center;
+}
+
+input[type=text] {
+    width: 300px;
+    height: 30px;
+    border-radius: 3px;
+    border-color: #a3a3a3;
+    margin: 5px;
 }
