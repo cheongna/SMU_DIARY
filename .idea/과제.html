@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>Vanilla JavaScript</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            font-family: Arial;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        .yellow-box {
+            background-color: rgb(255, 217, 0);
+            width: 45px;
+            height: 45px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 26px;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-right: 20px;
+        }
+        .text-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .title {
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: rgb(255, 217, 0);
+        }
+        .subtitle {
+            font-size: 13px;
+            color: rgb(249, 245, 196);
+            margin-top: 5px;
+        }
+        .categories {
+            display: flex;
+            margin-top: 20px;
+        }
+        .category {
+            background-color: rgb(39, 44, 36);
+            color: white;
+            width: 120px;
+            height: 50px;
+            margin-right: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 13px;
+            border-radius: 5px;
+            cursor: pointer;
+        
+        }
+        .category.selected {
+            background-color: rgb(255, 217, 0);
+            color: black;
+        }
+        .content {
+            background-color: rgb(32, 34, 33);
+            color: rgb(147, 151, 148);
+            padding: 14px;
+            margin-top: 1px;
+            height: 160px;
+            width: 600px;
+            font-size: 15px;
+            display: none; 
+            border-radius: 5px;
+            
+        }
+        .content.show {
+            display: block; 
+        }
+     
+
+.content ul li {
+    margin-bottom: 12px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="yellow-box">&nbsp;&nbsp;JS</div>
+        <div>
+            <h1 class="title">Vanilla JavaScript</h1>
+            <p class="subtitle">i.e., JavaScript without any (UI) framework or library</p>
+        </div>
+    </div>
+    <div class="categories">
+        <div class="category" onclick="showContent(0)">Why React?</div>
+        <div class="category" onclick="showContent(1)">Core Features</div>
+        <div class="category" onclick="showContent(2)">Related Resources</div>
+    </div>
+    <div class="content" id="content-0">
+    <p>
+       <ul>
+            <li>React is extremely popular</li>
+            <li>It makes building complex, interactive UIs a breeze</li>
+            <li>It's powerful & flexible</li>
+            <li>It has a very active and versatile ecosystem</li>
+        </ul>
+    </p>
+    </div>
+    <div class="content" id="content-1">
+        <p>
+            <ul>
+                 <li>React is extremely popular</li>
+                 <li>It makes building complex, interactive UIs a breeze</li>
+                 <li>It's powerful & flexible</li>
+                 <li>It has a very active and versatile ecosystem</li>
+             </ul>
+         </p>
+    </div>
+    <div class="content" id="content-2">
+        <p>
+            <ul>
+                 <li>React is extremely popular</li>
+                 <li>It makes building complex, interactive UIs a breeze</li>
+                 <li>It's powerful & flexible</li>
+                 <li>It has a very active and versatile ecosystem</li>
+             </ul>
+         </p>
+    </div>
+    <script>
+        function showContent(index) {
+            const contents = document.querySelectorAll(".content");
+            contents.forEach((content) => {
+                content.classList.remove("show");
+            });
+            const selectedContent = document.getElementById(`content-${index}`);
+            selectedContent.classList.add("show");
+            const categories = document.querySelectorAll(".category");
+            categories.forEach((category) => {
+                category.classList.remove("selected");
+            });
+            const selectedCategory = categories[index];
+            selectedCategory.classList.add("selected");
+        }
+    </script>
+</body>
+</html>
