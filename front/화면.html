@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>다이어리</title>
+    <style>
+        body{
+            background-color: #a3a3a3;
+            background-size: 100px;
+        }
+        .cover{
+            background-color: rgb(180, 209, 218);
+            border-radius: 9px;
+            width: 960px;
+            height: 660px;
+            margin: 100px auto;
+            position: relative;
+        }
+        .coverdot{
+            border: 3px dashed white;
+            border-radius: 9px;
+            left: 15px;
+            top: 15px;
+            right: 15px;
+            bottom: 15px;
+            position: absolute;
+        }
+        .page{
+            width: 900px;
+            height: 600px;
+            background-color: rgb(238, 238, 238);
+            margin: 10px;
+            border-radius: 9px;
+            position: absolute;
+        }
+        /*왼쪽*/
+        .left-box{
+            position: absolute;
+            width: 250px;
+            height: 520px;
+            top: 50px;
+            border-radius: 9px;
+            margin-left: 20px;
+            left: 0;
+            background-color: white;
+            border: 1px solid rgb(190, 190, 190);
+        }
+        /*오른쪽*/
+        .right-box {
+            position: absolute;
+            width: 570px;
+            height: 520px;
+            top: 50px;
+            border-radius: 9px;
+            margin-right: 40px;
+            right: 0;
+            background-color: white;
+            border: 1px solid rgb(190, 190, 190);
+        }
+        .container{
+            width: 800px;
+            height: 550px;
+            margin-left: 300px;
+            display: flex;
+            position: absolute;
+            top: 20px;
+        }
+        .title{
+            flex: 1;
+            font-size: 20px;
+            font-weight: bold; 
+        }   
+        .url{
+            flex: 1.1;
+            font-size: 13px;
+            margin: 8px;
+        }
+        /*카테고리*/
+        .menu_box {
+            position: absolute;
+            right: -34px; 
+            top: 70px; 
+            display: flex;
+            flex-direction: column; 
+            z-index: 1; 
+        }
+        .menu_button{
+            width: 56px;
+            text-align: center;
+            font-size: 14px;
+            background-color: rgb(132, 192, 233);
+            color: white;
+            padding: 9px;
+            border-radius: 5px 7px 7px 5px;
+            font-weight: bold; 
+            margin-bottom: 7px; 
+        }
+        .menu_button.active {
+            background-color: white;
+            color: black;
+        }
+    </style> 
+</head>
+<body>
+    <div class="cover">
+        <div class="coverdot">
+            <div class="page">
+             <!-----------왼쪽--------------------->
+            <div class="left-box">
+            </div>
+            <!-----------오른쪽-------------------->
+            <div class="right-box">
+            </div>
+            <!------------카테고리----------------->
+            <div class="menu_box">
+                <div class="menu_button" id="homeButton">홈</div>
+                <div class="menu_button" id="profileButton">프로필</div>
+                <div class="menu_button" id="diaryButton">다이어리</div>
+                <div class="menu_button" id="galleryButton">사진첩</div>
+                <div class="menu_button" id="manageButton">관리</div>
+            </div>
+            <div class="container">
+                <div class="title">땡땡님의 다이어리</div>
+                <div class="url">https://www.diary.com/아이디</div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const menuButtons = document.querySelectorAll('.menu_button');
+    
+        menuButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                menuButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+    
+                button.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
