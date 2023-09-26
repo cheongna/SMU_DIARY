@@ -1,148 +1,115 @@
-body {
-    margin: 2vh;
+body{
     background-color: #a3a3a3;
+    background-size: 100px;
 }
-
-#background {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* 가로 중앙 정렬 */
+.cover{
     background-color: rgb(180, 209, 218);
+    border-radius: 9px;
+    width: 960px;
+    height: 660px;
+    margin: 100px auto;
+    position: relative;
 }
-
-#outer {
-    margin: 8px -5px;
-    border-width: 5px;
-    border-style: dashed;
-    border-color: white;
-    border-radius: 8px;
-    padding: 15px;
-    display: flex;
+.coverdot{
+    border: 3px dashed white;
+    border-radius: 9px;
+    left: 15px;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    position: absolute;
 }
-
-/* 다이어리 영역 */
-#diary {
-    width: 95vw;
-    height: 90vh; /* 상하 여백을 두기 위해 조정 */
+.page{
+    width: 900px;
+    height: 600px;
     background-color: rgb(238, 238, 238);
-    display: flex;
-    border-radius: 8px;
-    flex-wrap: wrap;
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
+    margin: 10px;
+    border-radius: 9px;
+    position: absolute;
 }
-
-/* 다이어리 왼쪽 상단 영역 */
-#leftTopArea {
-    width: 20vw;
-    margin-right: 20px;
-}
-
-/* 다이어리 오른쪽 상단 영역 */
-#rightTopArea {
-    width: 75%;
-}
-
-#rightTopArea > p {
-    display: inline;
-}
-
-/* 사용자 다이어리 이름 글꼴 꾸미기 및 위치 배치 */
-#rightTopArea > p:first-child {
-    float: left;
-    font-size: xx-large;
-    font-weight: bold;
-    margin: 0.8vh 0 0 0;
-}
-
-/* 사용자 다이어리 주소 글꼴 꾸미기 및 위치 배치 */
-#rightTopArea > p:last-child {
-    float: right;
-    font-size: small;
-    margin: 4vh 0 0 0;
-}
-
-/* 다이어리 왼쪽 하단 영역 */
-#leftArea {
-    width: 20vw;
-    height: 90%;
-    border: 2px solid grey;
-    border-radius: 8px;
+/*왼쪽*/
+.left-box{
+    position: absolute;
+    width: 250px;
+    height: 520px;
+    top: 50px;
+    border-radius: 9px;
+    margin-left: 20px;
+    left: 0;
     background-color: white;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    border: 1px solid rgb(190, 190, 190);
 }
 
-#leftArea > h1 {
+.left-box > h1 {
     margin: 10px 0;
     padding-left: 25px;
     color: rgb(18, 99, 131);
 }
 
-#leftArea > h1:after {
+.left-box > h1:after {
     content: "";
     display: block;
-    width: 15vw;
+    width: 200px;
     border-bottom: 2px solid #bcbcbc;
     margin: 8px 0;
 }
 
-#leftArea > p {
+.left-box > p {
     margin: 0;
-    padding-left: 50px;
+    padding-left: 45px;
     font-weight: 800;
 }
 
-/* 다이어리 오른쪽 하단 영역 */
-#rightArea {
-    width: 75%;
-    height: 90%;
-    border: 2px solid grey;
-    border-radius: 8px;
+/*오른쪽*/
+.right-box {
+    position: absolute;
+    width: 570px;
+    height: 520px;
+    top: 50px;
+    border-radius: 9px;
+    margin-right: 40px;
+    right: 0;
     background-color: white;
-    margin-bottom: 20px;
+    border: 1px solid rgb(190, 190, 190);
 }
 
 /* 선 긋기 */
-#rightArea > h1:after {
+.right-box > h1:after {
     content: "";
     display: block;
-    width: 53vw;
+    width: 500px;
     border-bottom: 2px solid #bcbcbc;
     margin: 0 auto;
     padding-left: 20px;
 }
 
 #title {
-    width: 51.5vw;
+    width: 460px;
     margin:0 auto;
-    border-radius: 8px;
+    border-radius: 9px;
     background-color: rgb(204, 232, 235);
 }
 
 /* My Profile 글자 중앙 정렬 */
 #title > h1 {
     text-align: center;
-    margin-top: 15vh;
+    margin-top: 55px;
     padding: 5px 0;
     color: rgb(69, 166, 177);
 }
 
 /* 정보 입력하는 부분 중앙 정렬 */
 #info {
-    width: 50vw;
-    height: 48.4vh;
+    width: 450px;
+    height: 325px;
     margin: 0 auto;
 }
 
 /* Name, BirthDay, E-Mail, Motto 라벨 크기 동일하게 설정*/
 #info label {
     display: inline-block;
-    width: 8vw;
-    line-height: 56px;
+    width: 100px;
+    line-height: 52px;
     text-align: center;
     font-weight: bold;
     background-color: beige;
@@ -150,11 +117,10 @@ body {
 
 #info input {
     margin-left: -6px;
-    width: 42vw;
-    height: 56px;
+    width: 345px;
+    height: 52px;
     padding: 0;
     border: 0;
-
 }
 
 /* input 박스 클릭 시 생기는 테두리 없애기 */
@@ -163,123 +129,85 @@ body {
 }
 
 form {
-    width: 50vw;
+    width: 450px;
 }
 
 #item:first-child {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    width: 50vw;
-    height: 54px;
+    width: 445px;
+    height: 50px;
     overflow: hidden;
 }
 
 #last {
     border-bottom: 1px solid #bcbcbc;
-    width: 50vw;
-    height: 54px;
+    width: 445px;
+    height: 50px;
     overflow: hidden;
 }
 
 #item {
     border-bottom: 1px solid black;
-    width: 50vw;
-    height: 54px;
+    width: 450px;
+    height: 50px;
     overflow: hidden;
 }
 
 /* 프로필 정보 수정 버튼 */
 #mod_btn {
-    margin-top: 2.2vh; /*20px*/
     position: absolute;
-    right: 10vw;
+    right: 35px;
     background-color: white;
     border: 1px solid black;
     border-radius: 8px;
     padding: 5px 13px;
 }
 
-/* 카테고리에 있는 버튼 */
-#home_btn {
+.container{
+    width: 800px;
+    height: 50px;
+    margin-left: 300px;
+    display: flex;
     position: absolute;
-    border-width: 0;
-    background-color: rgb(132, 192, 233);
-    border-radius: 5px;
-    padding: 3px 0 3px 0;
-    width: 3.5vw;
-    right: 0.15vw;
-    top: 12.75vh;
-    color: white;
-    /*
-    width: 69px;
-    right: 1px;
-    top: 120px;
-    */
+    top: 20px;
 }
 
-#profile_btn {
-    position: absolute;
-    border-width: 0;
-    background-color: rgb(132, 192, 233);
-    border-radius: 5px;
-    padding: 3px 0 3px 0;
-    width: 3.5vw;
-    right: 0.15vw;
-    top: 15.75vh;
-    color: white;
-    /*
-    width: 69px;
-    right: 1px;
-    top: 145px;
-    */
+.title{
+    flex: 1;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-#diary_btn {
-    position: absolute;
-    border-width: 0;
-    background-color: rgb(132, 192, 233);
-    border-radius: 5px;
-    padding: 3px 0 3px 0;
-    width: 3.5vw;
-    right: 0.15vw;
-    top: 18.75vh;
-    color: white;
-    /*
-    right: 1px;
-    top: 170px;
-    */
+.url{
+    flex: 1.1;
+    font-size: 13px;
+    margin: 8px;
 }
 
-#gallery_btn {
+/*카테고리*/
+.menu_box {
     position: absolute;
-    border-width: 0;
-    background-color: rgb(132, 192, 233);
-    border-radius: 5px;
-    padding: 3px 0 3px 0;
-    width: 3.5vw;
-    right: 0.15vw;
-    top: 21.75vh;
-    color: white;
-    /*
-    width: 69px;
-    right: 1px;
-    top: 195px;
-    */
+    right: -34px;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
 }
 
-#adm_btn {
-    position: absolute;
-    border-width: 0;
+.menu_button{
+    width: 56px;
+    text-align: center;
+    font-size: 14px;
     background-color: rgb(132, 192, 233);
-    border-radius: 5px;
-    padding: 3px 0 3px 0;
-    width: 3.5vw;
-    right: 0.15vw;
-    top: 24.75vh;
     color: white;
-    /*
-    width: 69px;
-    right: 1px;
-    top: 220px;
-    */
+    padding: 9px;
+    border-radius: 5px 7px 7px 5px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.menu_button.active {
+    background-color: white;
+    color: black;
 }

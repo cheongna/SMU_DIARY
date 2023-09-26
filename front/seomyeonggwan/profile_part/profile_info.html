@@ -8,58 +8,59 @@
     <script src="profile_info.js"></script>
 </head>
 <body>
-    <div id="background">
-        <div id="outer">
-            <div id="diary">
-                <div id="leftTopArea"></div>
-                <div id="rightTopArea">
-                    <p>SMU_DIARY</p>
-                    <p>https://www.diary.com/아이디</p>
+<div class="cover">
+    <div class="coverdot">
+        <div class="page">
+            <div class="left-box">
+                <h1>Profile</h1>
+                <p>소개</p>
+            </div>
+            <!-----------오른쪽-------------------->
+            <div class="right-box">
+                <div id="title">
+                    <h1>My Profile</h1>
                 </div>
-                <div id="leftArea">
-                    <h1>Profile</h1>
-                        <p>소개</p>
+                <h1></h1>
+                <div id="info">
+                    <form id="link" action="#">
+                        <div id="item">
+                            <label for="N">Name</label>
+                            <input id="N" type="text">
+                        </div>
+                        <div id="item">
+                            <label for="B">BirthDay</label>
+                            <input id="B" type="text">
+                        </div>
+                        <div id="item">
+                            <label for="E">E-mail</label>
+                            <input id="E" type="text">
+                        </div>
+                        <div id="item"></div>
+                        <div id="item">
+                            <label for="M">Motto</label>
+                            <input id="M" type="text">
+                        </div>
+                        <div id="last"></div>
+                    </form>
                 </div>
-                <div id="rightArea">
-                    <div id="title">
-                        <h1>My Profile</h1>
-                    </div>
-                    <h1></h1>
-                    <div id="info">
-                        <form id="link" action="#">
-                            <div id="item">
-                                <label for="N">Name</label>
-                                <input id="N" type="text">
-                            </div>
-                            <div id="item">
-                                <label for="B">BirthDay</label>
-                                <input id="B" type="text">
-                            </div>
-                            <div id="item">
-                                <label for="E">E-mail</label>
-                                <input id="E" type="text">
-                            </div>
-                            <div id="item"></div>
-                            <div id="item">
-                                <label for="M">Motto</label>
-                                <input id="M" type="text">
-                            </div>
-                            <div id="last"></div>
-                        </form>
-                    </div>
-                    <div id="btn">
-                        <button id="mod_btn" type="submit" form="link">수정</button>
-                    </div>
+                <div id="btn">
+                    <button id="mod_btn" type="submit" form="link">수정</button>
                 </div>
             </div>
-        </div>
-        <div id="category">
-            <button id="home_btn" type="submit" >홈</button>
-            <button id="profile_btn" type="submit" >프로필</button>
-            <button id="diary_btn" type="submit" >다이어리</button>
-            <button id="gallery_btn" type="submit" >사진첩</button>
-            <button id="adm_btn" type="submit" >관리</button>
+            <!------------카테고리----------------->
+            <div class="menu_box">
+                <div class="menu_button" id="homeButton">홈</div>
+                <div class="menu_button" id="profileButton">프로필</div>
+                <div class="menu_button" id="diaryButton">다이어리</div>
+                <div class="menu_button" id="galleryButton">사진첩</div>
+                <div class="menu_button" id="manageButton">관리</div>
+            </div>
+            <div class="container">
+                <div class="title">땡땡님의 다이어리</div>
+                <div class="url">https://www.diary.com/아이디</div>
+            </div>
         </div>
     </div>
+</div>
 </body>
 </html>
