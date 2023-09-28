@@ -8,21 +8,18 @@
     <script src="profile_20questions.js"></script>
 </head>
 <body>
-<div id="background">
-    <div id="outer">
-        <div id="diary">
-            <div id="leftTopArea"></div>
-            <div id="rightTopArea">
-                <p>SMU_DIARY</p>
-                <p>https://www.diary.com/아이디</p>
-            </div>
-            <div id="leftArea">
+<div class="cover">
+    <div class="coverdot">
+        <div class="page">
+            <!-- 왼쪽 -->
+            <div class="left-box">
                 <h1>Profile</h1>
                 <p>소개</p>
             </div>
-            <div id="rightArea">
+            <!-- 오른쪽 -->
+            <div class="right-box">
                 <div id="content">
-                    <form id="20questions">
+                    <form id="questions">
                         <label for="1" class="speech-bubble">01</label>
                         <strong>MBTI는?</strong><input id="1" type="text">
                         <label for="2" class="speech-bubble">02</label>
@@ -63,20 +60,24 @@
                         <strong>낮 VS 밤 VS 새벽?</strong><input id="19" type="text">
                         <label for="20" class="speech-bubble">20</label>
                         <strong>버킷리스트는?</strong><input id="20" type="text">
+                        <!-- 입력한 폼 양식을 보내는 버튼 -->
+                        <button id="mod_btn" type="submit">수정</button>
                     </form>
                 </div>
-                <div id="btn">
-                    <button id="mod_btn" type="submit" form="q&a">수정</button>
-                </div>
+            </div>
+            <!-- 카테고리 -->
+            <div class="menu_box">
+                <div class="menu_button" id="homeButton">홈</div>
+                <div class="menu_button" id="profileButton">프로필</div>
+                <div class="menu_button" id="diaryButton">다이어리</div>
+                <div class="menu_button" id="galleryButton">사진첩</div>
+                <div class="menu_button" id="manageButton">관리</div>
+            </div>
+            <div class="container">
+                <div class="title">땡땡님의 다이어리</div>
+                <div class="url">https://www.diary.com/아이디</div>
             </div>
         </div>
-    </div>
-    <div id="category">
-        <button id="home_btn" type="submit" >홈</button>
-        <button id="profile_btn" type="submit" >프로필</button>
-        <button id="diary_btn" type="submit" >다이어리</button>
-        <button id="gallery_btn" type="submit" >사진첩</button>
-        <button id="adm_btn" type="submit" >관리</button>
     </div>
 </div>
 </body>
