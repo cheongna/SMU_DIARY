@@ -44,6 +44,7 @@ body{
     margin: 10px 0;
     padding-left: 25px;
     color: rgb(18, 99, 131);
+    margin: 20px 0px 12.5px 0px;
 }
 
 .left-box > h1:after {
@@ -51,11 +52,10 @@ body{
     display: block;
     width: 200px;
     border-bottom: 2px solid #bcbcbc;
-    margin: 8px 0;
 }
 
 .left-box > p {
-    margin: 0;
+    margin: 0px;
     padding-left: 45px;
     font-weight: 800;
 }
