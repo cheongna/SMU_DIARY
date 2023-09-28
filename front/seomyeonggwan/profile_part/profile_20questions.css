@@ -1,138 +1,108 @@
-body {
-    margin: 2vh;
+body{
     background-color: #a3a3a3;
+    background-size: 100px;
 }
-
-#background {
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* 가로 중앙 정렬 */
+.cover{
     background-color: rgb(180, 209, 218);
+    border-radius: 9px;
+    width: 960px;
+    height: 660px;
+    margin: 100px auto;
+    position: relative;
 }
-
-#outer {
-    margin: 8px -5px;
-    border-width: 5px;
-    border-style: dashed;
-    border-color: white;
-    border-radius: 8px;
-    padding: 15px;
-    display: flex;
+.coverdot{
+    border: 3px dashed white;
+    border-radius: 9px;
+    left: 15px;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    position: absolute;
 }
-
-/* 다이어리 영역 */
-#diary {
-    width: 95vw;
-    height: 90vh; /* 상하 여백을 두기 위해 조정 */
+.page{
+    width: 900px;
+    height: 600px;
     background-color: rgb(238, 238, 238);
-    display: flex;
-    border-radius: 8px;
-    flex-wrap: wrap;
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
+    margin: 10px;
+    border-radius: 9px;
+    position: absolute;
 }
 
-/* 다이어리 왼쪽 상단 영역 */
-#leftTopArea {
-    width: 20vw;
-    margin-right: 20px;
-}
-
-/* 다이어리 오른쪽 상단 영역 */
-#rightTopArea {
-    width: 75%;
-}
-
-#rightTopArea > p {
-    display: inline;
-}
-
-/* 사용자 다이어리 이름 글꼴 꾸미기 및 위치 배치 */
-#rightTopArea > p:first-child {
-    float: left;
-    font-size: xx-large;
-    font-weight: bold;
-    margin: 0.8vh 0 0 0;
-}
-
-/* 사용자 다이어리 주소 글꼴 꾸미기 및 위치 배치 */
-#rightTopArea > p:last-child {
-    float: right;
-    font-size: small;
-    margin: 4vh 0 0 0;
-}
-
-/* 다이어리 왼쪽 하단 영역 */
-#leftArea {
-    width: 20vw;
-    height: 90%;
-    border: 2px solid grey;
-    border-radius: 8px;
+/* 다이어리 왼쪽 영역 */
+.left-box {
+    position: absolute;
+    width: 250px;
+    height: 520px;
+    top: 50px;
+    border-radius: 9px;
+    margin-left: 20px;
+    left: 0;
     background-color: white;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    border: 1px solid rgb(190, 190, 190);
 }
 
-#leftArea > h1 {
+.left-box > h1 {
     margin: 10px 0;
     padding-left: 25px;
     color: rgb(18, 99, 131);
+    margin: 20px 0 12.5px 0;
 }
 
-#leftArea > h1:after {
+.left-box > h1:after {
     content: "";
     display: block;
-    width: 15vw;
+    width: 200px;
     border-bottom: 2px solid #bcbcbc;
-    margin: 8px 0;
 }
 
-#leftArea > p {
+.left-box > p {
     margin: 0;
-    padding-left: 50px;
+    padding-left: 45px;
     font-weight: 800;
 }
 
 /* 다이어리 오른쪽 하단 영역 */
-#rightArea {
-    width: 75%;
-    height: 90%;
-    border: 2px solid grey;
-    border-radius: 8px;
+.right-box {
+    position: absolute;
+    width: 570px;
+    height: 520px;
+    top: 50px;
+    border-radius: 9px;
+    margin-right: 40px;
+    right: 0;
     background-color: white;
-    margin-bottom: 20px;
+    border: 1px solid rgb(190, 190, 190);
 }
 
 #content {
-    width: 70vw;
-    height: 75vh;
-    margin: 20px auto 0 auto;
-    /* border: 1px solid red; */
+    width: 550px;
+    height: 475px;
+    margin: 30px auto 0 auto;
     overflow-y: scroll; /* 스크롤 기능*/
 }
 
 form {
-    margin: 20px 130px; /*40px*/
+    margin: 20px 0; /*40px*/
+    padding: 0 25px;
 }
 
 /* 말풍선 안의 숫자에 대한 스타일 */
 label {
     display: inline-block;
-    line-height: 5.5vh;
+    line-height: 40px;
+    margin-top: -10px;
     margin-right: 7.5px;
-    font-size: 30px;
+    color: rgb(73, 142, 175);
+    font-size: 20px;
     font-weight: bold;
 }
 
 /* 말풍선에 관한 스타일 */
 .speech-bubble {
-    width : 5.5vw;
+    width : 70px;
     position: relative;
     background: rgb(183, 221, 224);
-    border-radius: .3em;
+    border-radius: 9px;
     text-align: center;
 }
 
@@ -151,13 +121,17 @@ label {
     margin-bottom: -13px;
 }
 
+#questions > input:nth-child(9n + 0) {
+    margin-bottom: 150px;
+}
+
 /* 사용자로부터 입력받는 창에 대한 스타일 */
-input {
+#questions > input {
     display: block;
-    width: 52vw; /*800*/
-    height: 7vh; /*45*/
+    width: 470px; /*800*/
+    height: 50px; /*45*/
     margin-top: 17.5px;
-    margin-bottom: 32px;
+    margin-bottom: 25px;
     border: 1px dashed black;
     border-radius: 4px;
     background-color: rgba(203, 232, 245, 0.363);
@@ -171,80 +145,67 @@ input:focus {
 /* 질문지 글자에 대한 스타일 */
 strong {
     color: rgb(73, 142, 175);
-    font-size: x-large;
+    font-size: large;
 }
 
 /* 수정 버튼에 대한 스타일 */
 #mod_btn {
-    margin-top: -1vh; /*60*/
     position: absolute;
-    right: 10vw;
+    right: 50px;
+    top: 450px;
     background-color: white;
     border: 1px solid black;
     border-radius: 8px;
-
     padding: 5px 13px;
 }
 
-/* 카테고리에 있는 버튼 */
-#home_btn {
+.container{
+    width: 800px;
+    height: 50px;
+    margin-left: 300px;
+    display: flex;
     position: absolute;
-    border-width: 0;
-    background-color: rgb(132, 192, 233);
-    border-radius: 5px;
-    padding: 3px 0 3px 0;
-    width: 3.5vw;
-    right: 0.15vw;
-    top: 12.75vh;
-    color: white;
+    top: 20px;
 }
 
-#profile_btn {
-    position: absolute;
-    border-width: 0;
-    background-color: rgb(132, 192, 233);
-    border-radius: 5px;
-    padding: 3px 0 3px 0;
-    width: 3.5vw;
-    right: 0.15vw;
-    top: 15.75vh;
-    color: white;
+.title{
+    flex: 1;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-#diary_btn {
-    position: absolute;
-    border-width: 0;
-    background-color: rgb(132, 192, 233);
-    border-radius: 5px;
-    padding: 3px 0 3px 0;
-    width: 3.5vw;
-    right: 0.15vw;
-    top: 18.75vh;
-    color: white;
+.url{
+    flex: 1.1;
+    font-size: 13px;
+    margin: 8px;
 }
 
-#gallery_btn {
+/*카테고리*/
+.menu_box {
     position: absolute;
-    border-width: 0;
-    background-color: rgb(132, 192, 233);
-    border-radius: 5px;
-    padding: 3px 0 3px 0;
-    width: 3.5vw;
-    right: 0.15vw;
-    top: 21.75vh;
-    color: white;
+    right: -34px;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
 }
 
-#adm_btn {
-    position: absolute;
-    border-width: 0;
+.menu_button{
+    width: 56px;
+    text-align: center;
+    font-size: 14px;
     background-color: rgb(132, 192, 233);
-    border-radius: 5px;
-    padding: 3px 0 3px 0;
-    width: 3.5vw;
-    right: 0.15vw;
-    top: 24.75vh;
     color: white;
+    padding: 9px;
+    border-radius: 5px 7px 7px 5px;
+    font-weight: bold;
+    margin-bottom: 7px;
+    cursor: pointer; /* 커서를 포인터로 변경 */
+}
+
+.menu_button.active {
+    background-color: white;
+    color: black;
 }
 
 /* 스크롤 바 스타일링 하겠다는 기본 속성*/
