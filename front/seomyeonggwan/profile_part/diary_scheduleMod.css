@@ -28,7 +28,7 @@ body {
     position: absolute;
 }
 
-/*왼쪽*/
+/* 왼쪽 */
 .left-box {
     position: absolute;
     width: 250px;
@@ -45,7 +45,7 @@ body {
     margin: 10px 0;
     padding-left: 25px;
     color: rgb(18, 99, 131);
-    margin: 20px 0px 12.5px 0px;
+    margin: 20px 0 12.5px 0;
 }
 
 .left-box > h1:after {
@@ -55,8 +55,11 @@ body {
     border-bottom: 2px solid #bcbcbc;
 }
 
-/*오른쪽*/
+/* 오른쪽 */
 .right-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     position: absolute;
     width: 570px;
     height: 520px;
@@ -68,6 +71,111 @@ body {
     border: 1px solid rgb(190, 190, 190);
 }
 
+
+#calendar {
+    border: 1px solid red;
+    width: 250px;
+    height: 450px;
+}
+
+#input-data {
+    border: 1px solid blue;
+    width: 250px;
+    height: 450px;
+}
+
+form {
+    margin: 80px 0 0 0;
+}
+
+#date {
+    margin: 0 10px 0 0;
+}
+
+#color {
+    margin: -5px 10px 10px 0;
+}
+
+#schedule {
+    margin: 10px 10px 10px 0;
+}
+
+input[type="date"] {
+    margin: 0 5px;
+    width: 80px;
+    position: relative;
+    border: 0;
+    background-color: #a3a3a3;
+    border-radius: 9px;
+}
+
+input[type="date"]::-webkit-clear-button,
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+}
+
+p {
+    font-weight: bolder;
+    display: inline-block;
+}
+
+input[type="date"]::before {
+    content: attr(data-placeholder);
+    width: 100%;
+}
+
+input[type="date"]:valid::before {
+    display: none;
+}
+
+input[data-placeholder]::before {
+    font-size: 15px;
+    text-align: center;
+}
+
+input {
+    vertical-align: middle;
+}
+
+#sel_color {
+    height: 35px;
+    width: 35px;
+    border: none;
+    background-color: white;
+}
+
+input#sel_color {
+    margin-left: 10px;
+}
+
+#schedule > input {
+    width: 230px;
+    height: 25px;
+}
+
+/* input 박스 클릭 시 생기는 테두리 없애기 */
+#schedule > input:focus {
+    outline: none;
+}
+
+#schedule > p {
+    margin: 5px 0 0 0;
+    font-size: small;
+    font-weight: 300;
+    color: gray;
+}
+
 .container {
     width: 800px;
     height: 50px;
@@ -76,11 +184,13 @@ body {
     position: absolute;
     top: 20px;
 }
+
 .title {
     flex: 1;
     font-size: 20px;
     font-weight: bold;
 }
+
 .url {
     flex: 1.1;
     font-size: 13px;
@@ -96,6 +206,7 @@ body {
     flex-direction: column;
     z-index: 1;
 }
+
 .menu_button {
     width: 56px;
     text-align: center;
@@ -108,6 +219,7 @@ body {
     margin-bottom: 7px;
     cursor: pointer;
 }
+
 .menu_button.active {
     background-color: white;
     color: black;
