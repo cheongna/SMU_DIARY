@@ -11,11 +11,35 @@
 <div class="cover">
   <div class="coverdot">
     <div class="page">
+      <!-- 왼쪽 -->
       <div class="left-box">
         <h1>Diary</h1>
       </div>
-      <!-----------오른쪽-------------------->
-      <div class="right-box"></div>
+      <!-- 오른쪽 -->
+      <div class="right-box">
+        <div id="calendar"></div>
+        <div id="input-data">
+          <form>
+            <div id="date">
+              날짜
+              <input type="date" id="startDate" data-placeholder="년 월 일" required/>
+              <p>-</p>
+              <input type="date" id="endDate" data-placeholder="년 월 일" required/>
+            </div>
+            <div id="color">
+              색상
+              <!-- 색상 선택 입력 필드 -->
+              <input id="sel_color" type="color" value="#000000" />
+              <!-- 색상표 레이블 -->
+              <label for="sel_color">▼</label>
+            </div>
+            <div id="schedule">
+              <input type="text" placeholder="새로운 일정" />
+              <p>*20자리 이내로 입력</p>
+            </div>
+          </form>
+        </div>
+      </div>
       <!------------카테고리----------------->
       <div class="menu_box">
         <div class="menu_button" id="homeButton">홈</div>
