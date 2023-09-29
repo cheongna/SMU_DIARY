@@ -17,7 +17,7 @@
             position: relative;
         }
         .coverdot{
-            border: 2px dashed white;
+            border: 3px dashed white;
             border-radius: 9px;
             left: 15px;
             top: 15px;
@@ -33,6 +33,7 @@
             border-radius: 9px;
             position: absolute;
         }
+        /*왼쪽*/
         .left-box{
             position: absolute;
             width: 250px;
@@ -44,6 +45,7 @@
             background-color: white;
             border: 1px solid rgb(190, 190, 190);
         }
+        /*오른쪽*/
         .right-box {
             position: absolute;
             width: 570px;
@@ -54,20 +56,7 @@
             right: 0;
             background-color: white;
             border: 1px solid rgb(190, 190, 190);
-            overflow-x: hidden;
-            overflow-y: scroll; 
         }
-        .right-box::-webkit-scrollbar {
-            width: 20px;
-        }
-         .right-box::-webkit-scrollbar-thumb {
-            background-color: rgb(214, 214, 214);
-            border-radius: 50px;  
-        }
-        .right-box::-webkit-scrollbar-track {
-            background-color:  rgb(241, 241, 241);
-            border-radius: 70px;  
-         }
         .container{
             width: 800px;
             height: 550px;
@@ -144,7 +133,7 @@
             color: white;
             font-size: 17px;
             cursor: pointer;
-        } 
+        } /*클릭하게 구현*/
         .calendar_table {
             margin-top: 22px;
             flex-grow: 0.9;
@@ -159,132 +148,13 @@
         .current_date {
             font-weight: bold;
         }
-        .folder {
-            cursor: pointer;
-            margin-left: 30px;
-            margin-top: 20px;
-        }
-        .post {
-            display: none; 
-            margin-top: 5px;
-            margin-left: 10px;
-            font-size: 13px;
-            list-style-type: none;
-
-        }
-        .post li {
-            margin-bottom: 7px;
-        }
-        .folder_setting {
-    
-            top: 200px; /* 원하는 수직 위치 (예: 10px) */
-            left: 150px; /* 원하는 수평 위치 (예: 20px) */
-            font-size: 13px;
-            transition: none; /* 애니메이션 없애기 */
-            transform: none;
-    
-        }
-        .date_box{
-            position: absolute;
-            margin-top: 20px;
-            margin-left: 35px;
-            background-color:rgb(229, 229, 229);
-            width: 500px;
-            height: 70px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .date{
-            color: rgb(29, 106, 150);
-        }
-        .day {
-            margin-left: 28px;
-            font-size: 30px; 
-            font-weight: bold; 
-        }
-        .weekday {
-            margin-left: 24px;
-            font-size: 14px; 
-            font-weight: bold; 
-        }
-        .feeling{
-            margin-left: 50px;
-
-        }
-        .today{
-            font-size: 18px;
-            font-weight: bold; 
-        }
-        .today_feeling{
-            margin-top: 7px;
-            margin-left: 27px;
-            font-size: 20px;
-            font-weight: bold; 
-            color: rgb(85, 128, 160);
-        }
-        .weather{
-            color: rgb(230, 126, 34);
-            font-size: 65px;
-            margin-left: 170px;
-            margin-top: -7px;
-        }
-        .dailyrecord_box{
-            margin-top: 110px;
-            margin-left: 35px;
-            width: 500px;
-            height: 250px;
-            border: 2px solid rgb(190, 190, 190);
-            position: relative;
-        }
-        .setting{
-            position: absolute;
-            margin-top: 10px;
-            margin-left: 40px;
-            font-size: 13px;
-            font-weight: bold; 
-            margin-top: 12px;
-            display: flex;
-            align-items: center;
-        }
-        .opensetting{
-            color:rgb(158, 158, 158);
-        }
-        .sticker{
-            color:rgb(243, 156, 18);
-            margin-left: 250px;
-        }
-        .sharing{
-            color:rgb(158, 158, 158);
-            margin-left: 20px;
-        }
-        .modify{
-            color:rgb(158, 158, 158);
-            margin-left: 20px;
-        }
-        .delete{
-            color:rgb(158, 158, 158);
-            margin-left: 20px;
-        }
-        .heart_box{
-            position: absolute;
-            margin-top: 30px;
-            margin-left: 40px;
-            z-index: 1;
-        }
-        .heart{
-            font-size: 28px;
-            cursor: pointer;
-        }
-        .heart.clicked {
-            color: red;
-        }
-        .heart_letter{
-            font-size: 13px;
-        }
         .menu_box {
-           margin-left: 860px;
-           margin-top: 80px;
+            position: absolute;
+            right: -34px; 
+            top: 70px; 
+            display: flex;
+            flex-direction: column; 
+            z-index: 1; 
         }
         .menu_button{
             width: 56px;
@@ -294,8 +164,8 @@
             color: white;
             padding: 9px;
             border-radius: 5px 7px 7px 5px;
-            margin-bottom: 0.3rem;
             font-weight: bold; 
+            margin-bottom: 7px; 
         }
         .menu_button.active {
             background-color: white;
@@ -321,38 +191,9 @@
                 </div>
                 <div class="calendar_table"></div>
             </div>
-            <div class="folder" onclick="togglePosts()">📁내 다이어리</div>
-            <ul class="post" style="display: none;">
-                <li>>일상</li>
-                <li>>여행</li>
-                <li>>문화</li>
-            </ul>
-            <div class="folder_setting">폴더 관리</div>
+            </div>
             </div>
             <div class="right-box">
-               <div class="date_box">
-                <div class="date">
-                    <div class="day">22</div>
-                    <div class="weekday">금요일</div>
-                </div>
-                <div class="feeling">
-                    <div class="today">오늘의 기분은</div>
-                    <div class="today_feeling">기쁨</div>
-                </div>
-                <div class="weather">☀</div>
-               </div>
-               <div class="dailyrecord_box"></div>
-               <div class="setting">
-                    <div class="opensetting">공개 설정: </div>
-                    <div class="sticker">스티커</div>
-                    <div class="sharing">공유</div>
-                    <div class="modify">수정</div>
-                    <div class="delete">삭제</div>
-                </div>
-                <div class="heart_box">
-                    <div class="heart" id="heart" onclick="toggleHeart()">&#9825;</div>
-                    <div class="heart_letter"><b>abcabc</b>님 외 <b>여러</b> 명이 좋아합니다.</div>
-                </div>
             </div>
             <div class="menu_box">
                 <div class="menu_button" id="homeButton">홈</div>
@@ -370,7 +211,7 @@
         </div>
     </div>
     <script>
-        const calendarButtons = document.querySelectorAll('.calendar_button');
+       const calendarButtons = document.querySelectorAll('.calendar_button');
         calendarButtons.forEach(button => {
         button.addEventListener('click', () => {
         const clickedButton = button;
@@ -438,72 +279,17 @@
         });   
         renderCalendar();
 
-        function togglePosts() {
-            const folders = document.querySelectorAll('.folder');
-            const posts = document.querySelectorAll('.post');
-            posts.forEach(post => {
-                post.style.display = 'none';
+    const menuButtons = document.querySelectorAll('.menu_button');
+    
+    menuButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            menuButtons.forEach(btn => {
+                btn.classList.remove('active');
             });
-            folders.forEach((folder, index) => {
-                folder.addEventListener('click', () => {
-                    if (posts[index].style.display === 'none') {
-                        posts[index].style.display = 'block';
-                    } else {
-                        posts[index].style.display = 'none';
-                    }
-                });
-            });
-        }
-        togglePosts();
-        
-        function toggleHeart() {
-        const heartIcon = document.getElementById('heart');
-            if (heartIcon.textContent === '♡') {
-                heartIcon.textContent = '♥';
-                heartIcon.classList.add('clicked');
-                } else if (heartIcon.textContent === '♥') {
-        heartIcon.textContent = '♡';
-        heartIcon.classList.remove('clicked');
-            }
-        }   
-        let activeButton;
-        function setActiveButton(button) {
-    if (activeButton) {
-        activeButton.classList.remove('active');
-    }
-    activeButton = button;
-    activeButton.classList.add('active');
-}
 
-const homeButton = document.getElementById('homeButton');
-const profileButton = document.getElementById('profileButton');
-const diaryButton = document.getElementById('diaryButton');
-const galleryButton = document.getElementById('galleryButton');
-const manageButton = document.getElementById('manageButton');
-
-// 각 메뉴 버튼에 클릭 이벤트 리스너 추가
-homeButton.addEventListener('click', () => {
-    setActiveButton(homeButton);
-});
-
-profileButton.addEventListener('click', () => {
-    setActiveButton(profileButton);
-});
-
-diaryButton.addEventListener('click', () => {
-    setActiveButton(diaryButton);
-});
-
-galleryButton.addEventListener('click', () => {
-    setActiveButton(galleryButton);
-});
-
-manageButton.addEventListener('click', () => {
-    setActiveButton(manageButton);
-});
-
-// setActiveButton 함수를 사용하여 초기 버튼 설정
-setActiveButton(diaryButton); // 다이어리 버튼을 초기 활성 상태로 설정
+            button.classList.add('active');
+        });
+    });
     </script>
 </body>
 </html>
