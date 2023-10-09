@@ -1,0 +1,93 @@
+/*****좌측 요소들*****/
+.profile_pic{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    text-align: center;
+    background-color: aquamarine;
+
+    /*정렬*/
+    position: absolute;
+    top: 5%; left: 16%;
+}
+.ment{
+    width: inherit;
+    height: auto;
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    background-color: bisque;
+
+    /*정렬*/
+    position: absolute;
+    top: 45%;
+}
+.name_box{
+    width: inherit;
+    height: 120px;
+    /* margin: auto; */
+    /*하단정렬*/
+    position: absolute;
+    bottom: 5%; left: 5%;
+}
+/********텍스트********/
+.name_text{
+    color: #333e93;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 0;
+}
+.id_text {
+    color: #eb8255;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 10px;
+}
+
+/********셀렉트 박스********/
+.select {
+  width: 90%;
+  height: 35px;
+  background: url('https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png') calc(100% - 5px) center no-repeat;
+  background-size: 20px;
+  padding: 5px 30px 5px 10px;
+  border-radius: 4px;
+  outline: 0 none;
+  margin-top: 16px;
+}
+.select option {
+  background: black;
+  color: #fff;
+  padding: 3px 0;
+}
+
+
+/*****우측요소들*****/
+.news_box{
+    width: 260px;
+    height: 150px;
+    margin: 10px 10px 10px 15px;
+    display: inline-block;
+    overflow: hidden;
+}
+.news_title_box{
+    font-size: 18px;
+}
+.schedule_box{
+    width: 250px;
+    height: 150px;
+    margin: 10px;
+    display: inline-block;
+    overflow: hidden;
+}
+.imshi_box{
+    width: 500px;
+    height: 300px;
+    margin: 5px;
+    display: inline-block;
+}
+
+hr{
+    width: 80%;
+    margin-left: 0%;
+}
